@@ -13,11 +13,11 @@
 - [Description of Random Situation](#description-of-random-situation)
 - [ModelZoo Homepage](#modelzoo-homepage)
 
-# [LDP LinUCB](#contents)
+# [LDP LinUCB Description](#contents)
 
 Locally Differentially Private (LDP) LinUCB is a variant of LinUCB bandit algorithm with local differential privacy guarantee, which can preserve users' personal data with theoretical guarantee.
 
-[Paper](https://arxiv.org/abs/2006.00701):  Kai Zheng, Tianle Cai, Weiran Huang, Zhenguo Li, Liwei Wang. "Locally Differentially Private (Contextual) Bandits Learning." *Advances in Neural Information Processing Systems*. 2020.
+[Paper](https://arxiv.org/abs/2006.00701):  Kai Zheng, Tianle Cai, [Weiran Huang](https://www.weiranhuang.com), Zhenguo Li, Liwei Wang. "Locally Differentially Private (Contextual) Bandits Learning." *Advances in Neural Information Processing Systems*. 2020.
 
 # [Model Architecture](#contents)
 
