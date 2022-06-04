@@ -15,6 +15,10 @@
 
 # [LDP LinUCB Description](#contents)
 
+![Platform](https://img.shields.io/badge/platform-mindspore-blue)
+![Top Language](https://img.shields.io/github/languages/top/huang-research-group/LDPbandit2020)
+![Latest Release](https://img.shields.io/github/v/release/huang-research-group/LDPbandit2020)
+
 Locally Differentially Private (LDP) LinUCB is a variant of LinUCB bandit algorithm with local differential privacy guarantee, which can preserve users' personal data with theoretical guarantee.
 
 [Paper](https://arxiv.org/abs/2006.00701):  Kai Zheng, Tianle Cai, [Weiran Huang](https://www.weiranhuang.com), Zhenguo Li, Liwei Wang. "Locally Differentially Private (Contextual) Bandits Learning." *Advances in Neural Information Processing Systems*. 2020.
