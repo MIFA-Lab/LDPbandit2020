@@ -15,9 +15,9 @@
 
 # [LDP LinUCB Description](#contents)
 
-![Platform](https://img.shields.io/badge/platform-mindspore-blue)
-![Top Language](https://img.shields.io/github/languages/top/huang-research-group/LDPbandit2020)
-![Latest Release](https://img.shields.io/github/v/release/huang-research-group/LDPbandit2020)
+[![Platform](https://img.shields.io/badge/platform-mindspore-blue)](https://www.mindspore.cn/install/en)
+[![Top Language](https://img.shields.io/github/languages/top/huang-research-group/LDPbandit2020)](https://github.com/huang-research-group/LDPbandit2020/search?l=python)
+[![Latest Release](https://img.shields.io/github/v/release/huang-research-group/LDPbandit2020)](https://github.com/huang-research-group/LDPbandit2020/releases)
 
 Locally Differentially Private (LDP) LinUCB is a variant of LinUCB bandit algorithm with local differential privacy guarantee, which can preserve users' personal data with theoretical guarantee.
 
