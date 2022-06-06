@@ -1,17 +1,17 @@
 #!/bin/bash
-# Copyright 2020 Huawei Technologies Co., Ltd
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# ============================================================================
 
-python3 train_eval.py > result.log 2>&1 & 
+# parameters
+epsilon=8e5
+delta=1e-1
+alpha=1e-1
+iter_num=1e6
+timestamp=`date '+%s'`
+
+# preparation
+SHELL_FOLDER=$(cd "$(dirname "$0")";pwd)
+cd ${SHELL_FOLDER}/../
+if [ ! -d "./results" ]; then
+    mkdir ./results
+fi
+
+python train_eval.py --epsilon=${epsilon} --delta=${delta} --alpha=${alpha} --iter_num=${iter_num}| tee ./results/"${timestamp}_epsilon_${epsilon}_delta_${delta}_alpha_${alpha}_iter_num_${iter_num}".txt

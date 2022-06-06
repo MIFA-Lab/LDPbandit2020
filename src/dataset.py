@@ -1,24 +1,10 @@
-# Copyright 2020 Huawei Technologies Co., Ltd
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# ============================================================================
 """
 MovieLens Environment.
+Datasets can be downloaded at https://files.grouplens.org/datasets/movielens/ml-100k.zip
 """
 
 import random
 import numpy as np
-from mindspore import Tensor
 
 _MAX_NUM_ACTIONS = 1682
 _NUM_USERS = 943
@@ -58,7 +44,7 @@ class MovieLensEnv:
         self._data_matrix = load_movielens_data(data_file)
         # Keep only the first items
         self._data_matrix = self._data_matrix[:, :num_movies]
-        # Filter the users with at least one rating score
+        # Pick out the users with at least one rating score
         nonzero_users = list(
             np.nonzero(
                 np.sum(
@@ -92,8 +78,8 @@ class MovieLensEnv:
         """random select a user and return its feature."""
         sampled_user = random.randint(0, self._data_matrix.shape[0] - 1)
         self._current_user = sampled_user
-        return Tensor(self._feature[sampled_user])
+        return self._feature[sampled_user]
 
     def current_rewards(self):
         """rewards for current user."""
-        return Tensor(self._approx_ratings_matrix[self._current_user])
+        return self._approx_ratings_matrix[self._current_user]
