@@ -7,11 +7,11 @@
 
 ## Description
 
-Locally Differentially Private (LDP) LinUCB is a variant of LinUCB bandit algorithm with local differential privacy guarantee, which can preserve users' personal data with theoretical guarantee.
+Locally Differentially Private (LDP) LinUCB is a variant of LinUCB bandit algorithm with local differential privacy guarantee, which can preserve users' personal data with theoretical guarantees.
 
 The server interacts with users in rounds. For a coming user, the server first transfers the current model parameters to the user. In the user side, the model chooses an action based on the user feature to play (e.g., choose a movie to recommend), and observes a reward (or loss) value from the user (e.g., rating of the movie). Then we perturb the data to be transferred by adding Gaussian noise. Finally, the server receives the perturbed data and updates the model. Details can be found in the [paper](https://arxiv.org/abs/2006.00701).
 
-Paper:  Kai Zheng, Tianle Cai, [Weiran Huang](https://www.weiranhuang.com), Zhenguo Li, Liwei Wang, "[Locally Differentially Private (Contextual) Bandits Learning](https://arxiv.org/abs/2006.00701)", *Advances in Neural Information Processing Systems*, 2020.
+Paper:  Kai Zheng, [Tianle Cai](https://tianle.website/), [Weiran Huang](https://www.weiranhuang.com), Zhenguo Li, [Liwei Wang](http://www.liweiwang-pku.com/), "[Locally Differentially Private (Contextual) Bandits Learning](https://arxiv.org/abs/2006.00701)", *Advances in Neural Information Processing Systems*, 2020.
 
 Note: An earlier MindSpore-based version can be found in [MindSpore Models (Gitee)](https://gitee.com/mindspore/models/tree/master/research/rl/ldp_linucb) or [v1.0.0](https://github.com/huang-research-group/LDPbandit2020/tree/v1.0.0). 
 
@@ -19,12 +19,12 @@ Note: An earlier MindSpore-based version can be found in [MindSpore Models (Gite
 
 Dataset used: [MovieLens 100K](https://grouplens.org/datasets/movielens/100k/) ([download](https://files.grouplens.org/datasets/movielens/ml-100k.zip))
 
-- Dataset size：5MB, 100,000 ratings (1-5) from 943 users on 1682 movies.
-- Data format：csv/txt files
+- Dataset size: 5MB, 100,000 ratings (1-5) from 943 users on 1682 movies.
+- Data format: csv/txt files.
 
 We process the dataset by `src/dataset.py`:
 We first pick out all the users having at least one rating score.
-Then SVD is appied to complement missing ratings and full rating table is obtained.
+Then SVD is applied to complement missing ratings and the full rating table is obtained.
 We normalize all the ratings to [-1,1].
 
 
@@ -40,8 +40,8 @@ pip install -r requirements.txt     # install the dependencies
 ```
 
 Code is tested in the following environment:
-- numpy==1.21.6
-- matplotlib==3.5.2
+- `numpy==1.21.6`
+- `matplotlib==3.5.2`
 
 
 ## Script and Sample Code
@@ -135,11 +135,11 @@ If you find our work useful in your research, please consider citing:
 
 ```
 @article{zheng2020locally,
-  title={Locally differentially private (contextual) bandits learning},
-  author={Zheng, Kai and Cai, Tianle and Huang, Weiran and Li, Zhenguo and Wang, Liwei},
-  journal={Advances in Neural Information Processing Systems},
-  volume={33},
-  pages={12300--12310},
-  year={2020}
+    title={Locally differentially private (contextual) bandits learning},
+    author={Zheng, Kai and Cai, Tianle and Huang, Weiran and Li, Zhenguo and Wang, Liwei},
+    journal={Advances in Neural Information Processing Systems},
+    volume={33},
+    pages={12300--12310},
+    year={2020}
 }
 ```
