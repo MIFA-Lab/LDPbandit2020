@@ -108,7 +108,7 @@ The regret value will be achieved as follows:
 
 # [Model Description](#contents)
 
-The [original paper](https://arxiv.org/abs/2006.00701) assumes that the norm of user features is bounded by 1 and the norm of rating scores is bounded by 2. For the MovieLens dataset, we normalize rating scores to [-1,1]. Thus, we set `sigma` in Algorithm 5 to be $$4/epsilon \* sqrt(2 \* ln(1.25/delta))$$.
+The [original paper](https://arxiv.org/abs/2006.00701) assumes that the norm of user features is bounded by 1 and the norm of rating scores is bounded by 2. For the MovieLens dataset, we normalize rating scores to [-1,1]. Thus, we set `sigma` in Algorithm 5 to be $4/\epsilon \times \sqrt{2 \times ln(1.25/\delta)}$.
 
 ## [Performance](#contents)
 
